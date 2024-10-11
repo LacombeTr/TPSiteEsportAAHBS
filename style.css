@@ -1,0 +1,330 @@
+@import url("https://fonts.cdnfonts.com/css/neue-power");
+/* Neue Power */
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+/* Helvetica Neue */
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: Neue Power;
+}
+
+p {
+	margin: 0;
+	font-family: Helvetica Neue;
+}
+
+.bg-pink-500 {
+	background-color: hsl(330, 67%, 52%);
+}
+
+.bg-pink-500-semi-transparent {
+	background-color: hsla(330, 67%, 52%, 0.85);
+}
+
+.text-pink {
+	color: hsl(330, 67%, 52%);
+}
+
+.text-white {
+	color: white;
+}
+
+.section-title {
+	text-transform: uppercase;
+
+	font-weight: bolder;
+	font-size: 80px;
+}
+
+.nav-link {
+	text-transform: uppercase;
+	color: white;
+
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.nav-link:hover {
+	text-decoration: underline;
+	color: white;
+}
+
+.navbar-brand {
+	display: flex;
+	align-items: center;
+
+	h2 {
+		margin: 0 0 0 0;
+		padding: 0;
+		font-weight: bolder;
+	}
+
+	p {
+		margin: 0;
+		font-weight: bold;
+	}
+}
+
+.brand-text {
+	margin: 0 32px 0 16px;
+
+	color: white;
+}
+
+.carousel {
+	margin-top: -48px;
+
+	h3 {
+		font-size: 64px;
+		text-transform: uppercase;
+		font-weight: bolder;
+
+		text-shadow: 0px 4px 10px hsla(0, 0%, 0%, 0.5);
+	}
+
+	p {
+		text-shadow: 0px 1px 4px hsla(0, 0%, 0%, 0.5);
+	}
+}
+
+.actus {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	margin-bottom: 48px;
+
+	h2 {
+		color: #212121;
+		margin-block: 48px;
+	}
+
+	.actus {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 32px;
+
+		margin: 32px 32px 0 32px;
+	}
+
+	.grid-actu {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+
+		gap: 32px;
+
+		.card {
+			position: relative;
+			overflow: hidden;
+
+			height: 300px;
+
+			cursor: pointer;
+
+			transition: all 0.2s ease-in;
+
+			img {
+				height: 175px;
+			}
+
+			.card-body {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				background-color: none;
+
+				* {
+					padding: 0;
+					margin: 0;
+				}
+
+				.caption {
+					font-family: Helvetica Neue;
+					font-style: italic;
+					font-size: small;
+
+					color: hsl(330, 67%, 52%);
+				}
+			}
+		}
+
+		.card:hover {
+			background-color: hsla(330, 67%, 52%, 0.5);
+
+			.caption {
+				color: white;
+			}
+		}
+	}
+
+	.calendar {
+		display: grid;
+
+		grid-template-rows: repeat(32px 500px);
+
+		height: 600px;
+
+		border-radius: 8px;
+		border: solid 1px black;
+
+		overflow: hidden;
+
+		h3 {
+			margin-block: 16px;
+			font-weight: bolder;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		h3::first-letter {
+			color: hsl(330, 67%, 52%);
+		}
+
+		li:nth-child(even) {
+			background-color: hsla(330, 67%, 52%, 0.5);
+			color: white;
+		}
+
+		.dates {
+			border-top: solid 1px black;
+			overflow: scroll;
+
+			ul {
+				list-style: none;
+
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				margin-inline: 0px 0;
+				padding: 16px 128px 16px 32px;
+
+				height: 64px;
+			}
+		}
+	}
+}
+
+.lequipe {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	overflow: hidden;
+
+	h2 {
+		color: #212121;
+		margin-block: 64px;
+	}
+
+	.row {
+		padding: 0 64px 128px 64px;
+	}
+
+	.card-body {
+		display: flex;
+
+		align-items: center;
+		justify-content: space-between;
+		padding-inline: 12px;
+
+		* {
+			margin: 0;
+		}
+
+		h4 {
+			text-transform: uppercase;
+			font-size: 15px;
+			font-weight: bold;
+		}
+
+		h5 {
+			text-align: right;
+			text-transform: uppercase;
+			font-size: 12px;
+
+			color: hsl(330, 67%, 52%);
+		}
+	}
+
+	.card {
+		background-color: none;
+
+		transition: all 0.2s ease;
+	}
+
+	.card:hover {
+		background-color: hsl(330, 54%, 75%);
+
+		h5 {
+			color: white;
+		}
+	}
+
+	.equipeImgBG {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+
+		object-fit: cover;
+		z-index: -2;
+	}
+}
+
+@keyframes slideIn {
+	to {
+		left: 0;
+	}
+}
+
+.footer {
+	padding-block: 64px;
+	padding-inline: 128px;
+
+	color: #212121;
+
+	.col {
+		ul {
+			list-style: none;
+		}
+
+		h4 {
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		h4::first-letter {
+			color: hsl(330, 67%, 52%);
+		}
+
+		a {
+			text-decoration: none;
+		}
+		a:visited {
+			color: #212121;
+		}
+	}
+
+	p {
+		margin-top: 32px;
+		color: #212121;
+
+		font-size: small;
+		font-style: italic;
+		font-weight: light;
+		text-align: center;
+	}
+}
